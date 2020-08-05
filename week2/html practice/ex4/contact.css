@@ -1,0 +1,52 @@
+html, body{
+	height: 100%;	
+	background-color: grey;
+}
+
+input[type=text] {
+	display: block;
+	width: 90%;
+	text-align: left;
+    margin: 10px auto 10px auto;
+    padding: 10px 0px 10px 0px;
+
+}
+textarea{
+	display: block;
+    margin: auto;
+	width: 90%;
+}
+form {
+	display: block;
+	width: 100%;
+    margin: 0 auto;
+	/*padding-left: 20px;*/
+}
+#container {
+	display: block;
+    width: 35%;
+    max-width: 700px;	
+    margin: 0 auto;
+    background-color: #ff1a1a;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    /*align-content: center;*/
+}
+
+#title {
+	/*margin: auto;*/
+	/*width: 100%;*/
+	display: block;
+	text-align: center;
+	margin: 30px auto 0px auto;
+	color: white;
+}
+#btn {
+	display: block;
+	padding: 20px 0px 20px 0px;
+	width: 91.5%;
+	text-align: center;
+	margin: 10px auto 0px auto;
+	color: red;
+	background-color: white;
+}
