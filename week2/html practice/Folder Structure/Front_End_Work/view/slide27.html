@@ -1,0 +1,61 @@
+slide 27
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Flexbox</title>
+		<style>
+			.flex_container {
+				width: 40%;
+				height: 500px;
+				margin: 100px auto;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				background-color: black;
+			}
+			.flex_item {
+				background-color: beige;
+				width: 200px;
+				height: 100px;
+				text-align: center;
+				font-size: 100px;
+			}
+			.flex_item_expanded {
+				background-color: bisque;
+				width: 500px;
+			}
+			.first-item {
+				order: 1;
+			}
+			.second-item {
+				order: 2;
+			}
+			.last-item {
+				order: -1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex_container">
+			<div class="flex_item last-item">
+				1
+			</div>
+			<div class="flex_item last-item">
+				2
+			</div>
+			<div class="flex_item last-item">
+				3
+			</div>
+			<div class="flex_item second-item">
+				4
+			</div>
+			<div class="flex_item flex_item_expanded first-item">
+				5
+			</div>
+			<div class="flex_item first-item">
+				6
+			</div>
+		</div>
+	</body>
+</html>
