@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="HW1.css">
+	<script src="HW1.js"></script>
+</head>
+
+<body>
+	<div class="calculator">
+
+		<h2>Calculator</h2>
+		<table>
+			<tr>
+				<td><label for="X">X :</label></td>
+				<td><input type="text" id="X" value="0" /></td>
+			</tr>
+
+			<tr>
+				<td><label for="Y">Y : </label></td>
+				<td><input type="text" id="Y" value="0" /></td>
+			</tr>
+
+			<tr>
+				<td colspan="2" style="text-align: center;">
+					<input type="button" onclick="add()" name="+" value="+" />
+					<input type="button" onclick="sub()" name="-" value="-" />
+					<input type="button" onclick="mul()" name="*" value="*" />
+					<input type="button" onclick="dvd()" name="/" value="/" />
+				</td>
+			</tr>
+
+			<tr>
+				<td><label for="answer">Ans:</label></td>
+				<td><input type="text" id="answer" value="0" disabled /></td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+
+.calculator {
+    text-align: center;
+	font-size:12px;  
+    font-family:"Times New Roman";
+    color: red;
+    padding:0px;
+    margin:0px;  
+	background-color: lightgray;
+    width: 220px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: darkgray;
+	text-align:center;
+	height:180px;
+
+	top:50%;
+	left:50%;
+	position:absolute;
+	margin-top:-150px;
+	margin-left:-100px;
+}
+
+
