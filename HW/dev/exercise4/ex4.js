@@ -66,8 +66,8 @@ function pronunciation(word) {
             return cur.after;
         } 
     }
-    console.log(false); 
-    return [];
+    //console.log(false); 
+    return -1;
 }
 
 // Phase II, User enters a word — the program reports pronunciation as a list of phonemes AND a list of words that sound the same (is made up of exactly the same sequence of phonemes.
@@ -183,7 +183,7 @@ function oneLess(word) {
 
 function main() {
     let word = prompt("please enter a single word").toUpperCase();
-    while (pronunciation(word) === 0) {
+    while (pronunciation(word) === -1) {
         word = prompt("please enter again").toUpperCase();
     }
     phaseI = pronunciation(word);
