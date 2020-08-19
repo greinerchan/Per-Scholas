@@ -21,9 +21,11 @@ function mainEntry(fileContentLoaded) {
     //        this is an example use
     //console.log("Where the content is: ",fileContentLoaded.split("\n"))
     var splitContent = fileContentLoaded.split("\n");
+     console.log(splitContent);
     //call method
     //do logic
-    //var result = splitOnSpace(splitContent[0]);
+     var result = splitOnSpace(splitContent[2000]);
+    console.log(result);
     for (let i = 0; i < splitContent.length; i++) {
         if (isValid(splitOnSpace(splitContent[i]).before)) {
             reducedFile.push(splitContent[i]);
@@ -165,7 +167,7 @@ function strCmpr2(first, second) {
     }
 }
 
-//Phase VI, Remove phoneme   
+//Phase V, Remove phoneme   
 function oneLess(word) {
     //let word = prompt("please enter a single word").toUpperCase();
     let list = new Array();
