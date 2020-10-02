@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <button type="button" id="button">Making Asynchronous Request to the Webserver</button>
+    <script>
+        var button = document.getElementById("button");
+        button.onclick = makeAsynchronousRequestToWebserver;
+        function makeAsynchronousRequestToWebserver() {
+            var request = new XMLHttpRequest();
+
+            request.onreadystatechange = function () {
+                if (request.readyState == 4) {
+                    console.log("The readyState at this point is " + request.readyState);
+                }
+            }
+
+
+            request.open("GET", "http://localhost:8080/ADModule_Servlet_RestXML/XmlServlet");
+            console.log("The readyState after open() is " + request.readyState);
+
+            request.send(null);
+            console.log("The readyState after send() is = " + request.readyState);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Selecting Elements with CSS Selectors</title>
+</head>
+
+<body>
+
+   <ul>
+       <li>
+           <font color="blue" class="myLi">
+               More generally, elements can be selected based on attribute values
+           </font>
+       </li>
+
+       <li>
+            <font color="green" class="myLi">
+               <b>Selectors can also specify document structure</b>
+            </font>
+       </li>
+
+       <li>
+            <font color="blue" class="myLi">
+               <u>These basic selectors can be combined</u>
+            </font>
+       </li>
+
+       <li>
+            <font color="green" id="LastLI" class="myLi">
+               Selectors can be combined to select multiple 
+               elements or multiple sets of elements
+            </font>
+       </li>
+
+   </ul>
+
+<!-- JavaScript code starts -->
+<script>
+  var q1 = document.querySelector('font[color="blue"]');
+  console.log(q1);
+  var q2= document.querySelector('li>font>b');
+  console.log(q2);
+  var q3= document.querySelector('li>font[color="blue"]>u');
+  console.log(q3);
+  var q4 = document.querySelector('#LastLI, .green');
+  console.log(q4);
+
+  
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

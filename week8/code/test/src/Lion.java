@@ -1,0 +1,1 @@
+interface Lion { default String says() { return "ROAR!"; } }

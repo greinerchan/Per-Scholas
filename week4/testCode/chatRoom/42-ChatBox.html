@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Chat Boxes</title>
+<style>
+
+    .chat{
+        border-style: solid;
+        float: left;
+        width: 400px;
+        border-color: black;
+        padding: 2px;
+        margin: 2px;
+    }
+    h2{
+        text-align: center;
+    }
+    #buttonsStyle{
+        float: right;
+    }
+
+</style>
+</head>
+
+<body>
+    <div id="chat1" class="chat" >
+        <h2>Chat 1</h2>
+        <p >
+            <ul id="chatingbox1" class="ulBoxes">
+               
+            </ul>
+        </p>
+        <br><br>
+
+        <table>
+            <tr>
+              <th><label for="name">Name</label></th>
+              <th><label for="area">Text Area</label></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td><input type="text" class="chatName"  id="name1" value=""> </td>
+              <td><textarea id="area1" name="area1" rows="2" cols="30"> </textarea></td>
+              <td><button id='submit1' class='submit'>Submit</button></td>
+            </tr>
+          </table>
+
+
+    </div>
+    
+
+     <div id="chat2" class="chat">
+         <h2>Chat 2</h2>
+         <p >
+             <ul id="chatingbox2" class="ulBoxes">
+                
+             </ul>
+         </p>
+         <br><br>
+
+         <table>
+            <tr>
+              <th><label for="name">Name</label></th>
+              <th><label for="area">Text Area</label></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td><input type="text" class="chatName" id="name2"> </td>
+              <td><textarea id="area2" name="area2" rows="1" cols="20"> </textarea></td>
+              <td><button id='submit2' class='submit'>Submit</button></td>
+            </tr>
+          </table>
+
+     </div>
+
+        
+
+<!-- JavaScript code starts -->
+<script>
+    document.querySelector('#submit1').addEventListener('click', function() {
+    var ul = document.querySelectorAll('ul');
+        
+            var nMessage = document.createElement('li');
+            var nMessage2 = document.createElement('li');
+        
+
+            nMessage.textContent = document.getElementById("name1").value + ": " + document.getElementById("area1").value;
+            nMessage2.textContent = document.getElementById("name1").value + ": " + document.getElementById("area1").value;
+                
+                ul[0].appendChild(nMessage);
+                ul[1].appendChild(nMessage2);
+                
+ 
+    });
+
+
+    const button2 = document.querySelector('#button2');
+
+    document.querySelector('#submit2').addEventListener('click', function() {
+    var ul = document.querySelectorAll('ul');
+        
+            var nMessage = document.createElement('li');
+            var nMessage2 = document.createElement('li');
+           
+
+
+            nMessage.textContent = document.getElementById("name2").value + ": " + document.getElementById("area2").value;
+            nMessage2.textContent = document.getElementById("name2").value + ": " + document.getElementById("area2").value;
+                
+                ul[0].appendChild(nMessage);
+                ul[1].appendChild(nMessage2);
+ 
+    });
+    
+
+    
+    
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

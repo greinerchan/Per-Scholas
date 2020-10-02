@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="uft-8">
+    <title></title>
+</head>
+
+<body>
+    <h1>slide 10</h1>
+    <script>
+        scope = "global";
+        function checkscope2() {
+            scope = "local";
+            myScope = "local";
+
+            return [scope, myScope];
+        }
+        var result = checkscope2();
+        console.log(scope);
+        console.log(myScope);
+        console.log(result);
+    </script>
+</body>
+
+</html>

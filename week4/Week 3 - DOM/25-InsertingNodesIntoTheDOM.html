@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Inserting Nodes Into The DOM</title>
+</head>
+
+<body>
+
+    <h1>Inserting Nodes Into The DOM</h1>
+
+        <ul>
+            <li id="useless">Nothing to see here</li>
+        </ul>
+
+<!-- JavaScript code starts -->
+<script>
+   var ul = document.querySelector('ul');
+   var newElement = document.createElement('li');
+   newElement.textContent= "node.appendChild(): Add a node as the last child of a parent element";
+   ul.appendChild(newElement);
+   
+   var anotherElement = document.createElement('li');
+   anotherElement.textContent = "node.insertBefore(): Insert a node into the parent element before a specified sibling node";
+   ul.insertBefore(anotherElement, newElement);
+
+   var uselessElement = document.querySelector('#useless');
+   var aDifferentElement = document.createElement('li');
+   aDifferentElement.textContent = "node.replaceChild(): Replace an existing node with a new node";
+   ul.replaceChild(aDifferentElement,uselessElement);
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

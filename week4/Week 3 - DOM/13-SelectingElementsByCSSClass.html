@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Selecting Elements by CSS Class</title>
+</head>
+
+<body>
+
+    <div>
+       The order of the identifiers does not matter. Note that both
+       the class attribute and the getElementsByClassName() methods
+       separate class identifiers with spaces, not with commas.
+    </div>
+        <ul id="items" class="list-group">
+            <li class="list-group-item odd">Item 1</li>
+            <li class="list-group-item even">Item 2</li>
+            <li class="list-group-item odd">Item 3</li>
+            <li class="list-group-item even">Item 4</li>
+        </ul>
+        
+    
+
+
+<!-- JavaScript code starts -->
+<script>
+    
+    var items = document.getElementsByClassName("even list-group-item");
+    for (i in items){
+        console.log(items[i]);
+    } 
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Creating new Nodes</title>
+</head>
+
+<body>
+
+    <h1>Creating new Nodes</h1>
+
+        <ul>
+            <li>document.createElement(): Create a new element node</li>
+            <li>document.createTextNode(): Create a new text node</li>
+            <li>node.textContent: Get or set the text content of a an element node</li>
+            <li>node.innerHTML: Get or set the HTML content of an element</li>
+        </ul>
+
+<!-- JavaScript code starts -->
+<script>
+    var newElement = document.createElement('p');
+    newElement.textContent="We've created a new p element on the document by using the createElement() method. In order to add text to the element, we can use the textContent property";
+    console.log(newElement);
+    newElement.innerHTML="The innerHTML property allow you to add <strong>HTML</strong> as well as text to an element";
+    console.log(newElement);
+    var newTextNode = document.createTextNode("It is also possible to create a text node with the createTextNode() method");
+    console.log(newTextNode);
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

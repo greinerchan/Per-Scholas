@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Modifying Attributes</title>
+</head>
+
+<body>
+
+    <h1>Modifying Attributes</h1>
+
+        <ul>
+            <li>setAttribute(): Adds or updates value of a specified attribute</li>
+            <li>hasAttribute(): Returns a true or flase boolean</li>
+            <li>getAttribute(): Returns the value of a specified attribute or null</li>
+            <li>removeAttribute(): Removes an attribute from an element</li>
+        </ul>
+
+        <img id="img" width="200px">
+
+<!-- JavaScript code starts -->
+<script>
+   var img=document.querySelector('#img');
+   img.setAttribute('src', 'Assets/fox.jpg');
+   console.log(img.hasAttribute('src'));
+   console.log(img.getAttribute('src'));
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

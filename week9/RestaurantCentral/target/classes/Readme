@@ -1,0 +1,8 @@
+1. The relation between Restaurant and Foodtype is Many to Many
+2. The relation between Restaurant and Review is One to Many
+3. If needed, add necessary instance variables in the entities to apply above relationship
+4. You might need junction tables - you don't need to create a Java class for that
+5. You can add helper methods the the implementations if needed
+6. Feel free to change method parameters if it's necessary
+7. Don't forget to reach out to the instructors or fellow classmates for help.
+8. Happy coding! Thank you! 

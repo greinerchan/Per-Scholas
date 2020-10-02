@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Elements By ID</title>
+</head>
+
+<body>
+
+<header id="main-header">
+    <div class="container">
+        <h1 id="header-title">
+            Selecting Elements By id
+        </h1>
+        An ID should be unique within a page. However, if more than one element
+        with the specified ID exists, the getElementById() method returns the 
+        first element in the source code.
+    </div>
+</header>
+
+<!-- JavaScript code starts -->
+<script>
+    var header = document.getElementById('header-title');
+    console.log(header)
+</script>
+<!-- JavaScript code ends !-->
+
+
+</body>
+
+
+</html>

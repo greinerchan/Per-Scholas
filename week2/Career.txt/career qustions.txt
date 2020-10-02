@@ -1,12 +1,28 @@
 elevator pitch:
 
-Hello, my name is Xi Chen. It is my great honor to talk with you. I just completed a master degree in Electrical and Computer Engineering at Carnegie Mellon University this May. I am interested in starting my career in full stack web development in your company.
- 
-For my coding experience, I developed a full-stack web service to establish a blog platform. I also developed a multi-threads designed game called Whack-a-Mole Game. Moreover, I also developed student management system to help people to manage student information. 
- 
-People say the prospects for software developer are very bright, and your company is a leading one in this field. so I wish to be a member of your company. Could you tell me more about your company?
+Hello, my name is Xi Chen. Did you know one biggest way to make a good impression on your customers at the first sight? By developing a good looking and responsive website. I’m a full-stack website developer and it is my great honor to talk with you.I am in the trainning of full-stack Java developer bootcamp at Per scholas and I just got my master's degree in Electrical and Computer Engineering at Carnegie Mellon University this May. I am familiar with back-end technologies as well as front-end by using Spring boot, Javascript, angular. Here is my resume. Could I know if there any opportunities open at the moment?
+
+
+
+
+resume take away: 1. When we mention per scholas program, we can put total hours or weeks we spend on web development, which is more impressive than we just put down the name.
+
+2. we better have project secitons to show we really know the stuff and can apply our knowledge to build real world project
+
+
+
+I am familiar with back-end technologies as well as front-end.  I have knowledge of backend JavaScript API and web services development in node.js. I also have basic knowledge of Java frameworks such as Spring MVC. In addition to the skills I have, I am a quick learner and I can adapt myself to perform more than one role. And I am willing to travel both in the US and outside the US.
+
+Here is my resume. Could I know if there any opportunities matching my profile at this moment?
+
+
 
 Three strength:
 1.firstly I would say I am hard working person. I try really hard for my school work and got good feedback.
 2.secondly I am kind of perfectionist, I would like to make sure my code well comment and dry.
 3. thirdly, I am a persistent person. I could spend many days to figure out the bugs and corner case with patience.
+
+For my coding experience, I developed a full-stack web service to establish a blog platform, which allows people to login in, blog creation, making comments and deletion. I also developed a multi-threads designed game called Whack-a-Mole Game. Moreover, I also developed student management system to help people to manage student information. 
+
+ 
+People say the prospects for software developers are very bright, and your company is a leading one in this field. so I wish to be a member of your company. 

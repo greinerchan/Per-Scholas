@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Modifying Styles</title>
+
+</head>
+
+<body>
+
+    <div id="myDiv">Modifying Styles</div>
+
+
+<!-- JavaScript code starts -->
+<script>
+   var div= document.querySelector('#myDiv');
+   //Edit the style with setAttribute
+   div.setAttribute('style','text-align:center')
+   //apply style to div directly.
+   div.style.backgroundColor='coral';
+   div.style.color='white';
+   div.style.height='100px';
+   div.style.width='100px';
+   div.style.border='2px solid black';
+   //make div into a circle and virtically center the text
+   div.style.borderRadius='50%';
+   div.style.display='flex';
+   div.style.justifyContent='center';
+   div.style.alignItems='center';
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

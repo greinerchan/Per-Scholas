@@ -1,0 +1,1 @@
+class MyThread extends Thread { public void run() { try { MyThread.sleep(2000); System.out.println("I took a long nap"); } catch (InterruptedException e) { } } } public class Main { public static void main(String[] args){ System.out.println("I am awake"); new MyThread().start(); System.out.println("And I feel alive"); } }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.2"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+    <!-- Define persistence unit -->
+    <persistence-unit name="Relationship Test">
+        <description>This is a short text describing my persistence unit.</description>
+        <class>com.perscholas.many_to_many.models.Teacher</class>
+        <class>com.perscholas.many_to_many.models.Department</class>
+        <class>com.perscholas.many_to_many.models.Credential</class>
+        <properties>
+        	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/many_to_many?serverTimezone=UTC"/>
+        	<property name="javax.persistence.jdbc.user" value="root"/>
+        	<property name="javax.persistence.jdbc.password" value="root"/>
+        	<property name="eclipselink.logging.level" value="Fine"/>
+        	<property name="eclipselink.ddl-generation" value="create-tables"/>
+        </properties>
+    </persistence-unit>
+</persistence>

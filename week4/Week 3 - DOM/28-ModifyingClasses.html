@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Modifying Classes</title>
+
+<style>
+    /*  Internal CSS */
+    .solidGreen{
+        border: 2px solid green;
+        width: fit-content;
+        padding: 2px;
+    }
+    .underlineBlue {
+        color:blue;
+        text-decoration:underline;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <h2 class="solidGreen">Modifying Classes</h2>
+
+        <ul>
+            <li class="solidGreen">className: Gets or set class value </li>
+            <li>classList.add(): Adds one or more class values </li>
+            <li class="solidGreen">classList.replace(): Replace an existing class value with a new class value </li>
+
+        </ul>
+
+<!-- JavaScript code starts -->
+<script>
+   var ul= document.querySelector('ul');
+   ul.firstElementChild.className='underlineBlue';
+   ul.previousElementSibling.classList.add('solidGreen', 'underlineBlue');
+   ul.lastElementChild.classList.replace('solidGreen', 'underlineBlue');
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

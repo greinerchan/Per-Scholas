@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Elements By Type</title>
+</head>
+
+<body>
+
+    <div>
+       The elements of the returned NodeList are in document order, so you can select the first
+       "li" element of a document like this:
+       <code> document.getElementByTagName("li")[0] </code>
+
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        
+    </div>
+
+
+<!-- JavaScript code starts -->
+<script>
+    var li = document.getElementsByTagName('li');
+    for (i in li) {console.log(li[i]);}
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

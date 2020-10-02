@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Modifying Classes</title>
+
+<style>
+    /*  Internal CSS */
+    .solidGreen{
+        border: 2px solid green;
+        width: fit-content;
+        padding: 2px;
+    }
+    .underlineBlue {
+        color:blue;
+        text-decoration:underline;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <h2 class="solidGreen">Modifying Classes</h2>
+
+        <ul>
+            <li class="userlineBlue">classList.toggle(): Toggles a class on or off </li>
+            <li>classList.contains(): Checks if class value exists</li>
+            <li class="solidGreen underlineBlue">classList.remove(): Remove a class value </li>
+
+        </ul>
+
+<!-- JavaScript code starts -->
+<script>
+   var ul= document.querySelector('ul');
+   ul.firstElementChild.classList.toggle('underlineBlue');
+   //Notice that this was twice Toggles a class on or off
+   //ul.firstElementChild.classList.toggle('underlineBlue');
+   
+   ul.previousElementSibling.classList.contains('solidGreen');
+   ul.lastElementChild.classList.remove('solidGreen');
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

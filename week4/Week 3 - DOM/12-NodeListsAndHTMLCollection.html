@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>NodeList and HTML Collection</title>
+</head>
+
+<body>
+
+    <div>
+       In this example trying to use <code>li.slice(1,3)</code>
+       would give us an error.
+
+        <ul>
+            <li>Item 0</li>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        
+    </div>
+
+
+<!-- JavaScript code starts -->
+<script>
+    
+   /*
+    The slice() method selects the elements starting at 
+    the given start argument, and ends at, but does not include,
+    the given end argument.
+    */
+    
+    // var myArr = li.slice(1,3); 
+    var li = document.getElementsByTagName("li");
+    var myArr = Array.prototype.slice.call(li,1,3);
+    for (i in myArr){
+        console.log(myArr[i]);
+    } 
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

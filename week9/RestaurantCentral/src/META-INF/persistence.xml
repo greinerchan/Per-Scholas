@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="RestaurantCentral">
+	  <description>This is a short text describing my persistence unit.</description>
+ 		<class>com.entity.Foodtype</class>
+        <class>com.entity.Restaurant</class>
+        <class>com.entity.Review</class>
+        <properties>
+        	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/RestaurantCentral?serverTimezone=UTC"/>
+        	<property name="javax.persistence.jdbc.user" value="root"/>
+        	<property name="javax.persistence.jdbc.password" value="19930131"/>
+        	<property name="eclipselink.logging.level" value="Fine"/>
+        	<property name="eclipselink.ddl-generation" value="create-tables"/>
+        </properties>
+	</persistence-unit>
+</persistence>

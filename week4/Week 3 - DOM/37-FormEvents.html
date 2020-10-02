@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Form Events</title>
+
+</head>
+
+<body>
+
+    <form>
+        First name:<br>
+        <input type="text" id="fname">
+        <br>
+        <input type="submit" value="Submit" />
+
+    </form>
+
+<!-- JavaScript code starts -->
+<script>
+   const name = document.getElementById("fname");
+   name.addEventListener('focus',changeToCoral);
+   name.addEventListener('blur',changeToWhite);
+   document.querySelector('form').addEventListener("submit",function () {alert(name.value)});
+
+   function changeToCoral() {name.style.backgroundColor='coral';}
+   function changeToWhite() {name.style.backgroundColor='white';}
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

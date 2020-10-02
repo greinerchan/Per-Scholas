@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.2"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+    <!-- Define persistence unit -->
+    <persistence-unit name="JPA Test">
+        <description>This is a short text describing my persistence unit.</description>
+        <class>com.perscholas.jpa_orm_lesson.models.Employee</class>
+        <properties>
+        	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa_orm_lesson?serverTimezone=UTC"/>
+        	<property name="javax.persistence.jdbc.user" value="root"/>
+        	<property name="javax.persistence.jdbc.password" value="19930131"/>
+        </properties>
+    </persistence-unit>
+</persistence>

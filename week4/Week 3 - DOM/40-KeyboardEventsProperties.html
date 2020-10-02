@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Keyboard Events Properties</title>
+
+</head>
+
+<body>
+    <div style="text-align: center; width: 480px;">
+        <p>
+            Press A, W, D, or S for up left right or down
+        </p>
+        <button id= "KeyW" >UP</button><br><br>
+        <button id= "KeyA" >LEFT</button>
+        <button id= "KeyD" >RIGHT</button><br><br>
+        <button id= "KeyS" >DOWN</button><br><br>
+
+    </div>
+   
+
+<!-- JavaScript code starts -->
+<script>
+  // Pass an event through to a listener
+
+  document.addEventListener('keydown', function() {
+      changeToCoral(document.getElementById(event.code));
+  });
+  
+  document.addEventListener('keyup', function() {
+      backToNormal(document.getElementById(event.code));
+  });
+  function changeToCoral(eventTarget){eventTarget.style.backgroundColor= 'coral';}
+  function backToNormal(eventTarget){eventTarget.style.backgroundColor='';}
+
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

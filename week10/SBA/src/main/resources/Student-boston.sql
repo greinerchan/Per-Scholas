@@ -1,0 +1,10 @@
+insert into Student (email, name, password) values ('hluckham0@google.ru', 'Hazel Luckham', 'test');
+insert into Student (email, name, password) values ('sbowden1@yellowbook.com', 'Sonnnie Bowden', 'test');
+insert into Student (email, name, password) values ('qllorens2@howstuffworks.com', 'Quillan Llorens', 'test');
+insert into Student (email, name, password) values ('cstartin3@flickr.com', 'Clem Startin', 'test');
+insert into Student (email, name, password) values ('tattwool4@biglobe.ne.jp', 'Thornie Attwool', 'test');
+insert into Student (email, name, password) values ('hguerre5@deviantart.com', 'Harcourt Guerre', 'test');
+insert into Student (email, name, password) values ('htaffley6@columbia.edu', 'Holmes Taffley', 'test');
+insert into Student (email, name, password) values ('aiannitti7@is.gd', 'Alexandra Iannitti', 'test');
+insert into Student (email, name, password) values ('ljiroudek8@sitemeter.com', 'Laryssa Jiroudek', 'test');
+insert into Student (email, name, password) values ('cjaulme9@bing.com', 'Cahra Jaulme', 'test');

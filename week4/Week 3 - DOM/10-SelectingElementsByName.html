@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Elements By Name</title>
+</head>
+
+<body>
+
+    <div>
+        getElementByName() will also return elements that have an id attribute
+        with the specified value. For comptibility, you should be careful
+        not to use the same string as both a name and an ID.
+        <ul id="items" class="list-group">
+            <li name="list-group-item">Item 1</li>
+            <li name="list-group-item">Item 2</li>
+            <li name="list-group-item">Item 3</li>
+        </ul>
+        
+    </div>
+
+
+<!-- JavaScript code starts -->
+<script>
+    var items = document.getElementsByName('list-group-item');
+    for (i in items) {console.log(items[i]);}
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

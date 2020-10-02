@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <button type="button" id="button">Making Asynchronous Request to the Webserver</button>
+    <script>
+        var button = document.getElementById("button");
+        button.onclick = makeAsynchronousRequestToWebserver;
+        function makeAsynchronousRequestToWebserver() {
+            var request = new XMLHttpRequest();
+
+            request.onreadystatechange = function () {
+                if (request.readyState == 4) {
+                    console.log("The readyState at this point is " + request.readyState);
+                    updatedDOM(request);
+                }
+            }
+
+            console.log("The readyState after open() is " + request.readyState);
+
+            request.open("GET", "http://localhost:8080/ADModule_Servlet_RestXML/JsonServlet");
+            request.send(null);
+            console.log("The readyState after send() is = " + request.readyState);
+        }
+        function updatedDOM(request) {
+            var jsonDoc = JSON.parse(request.responseText);
+            var ol = document.createElement("ol");
+             for (var i in jsonDoc) {
+            	var employee = jsonDoc[i];
+                var li = document.createElement("li");
+                // console.log(jsonDoc[i]);
+                for (var j in employee) {
+                    var div = document.createElement("div");
+                    div.textContent = j + " : " + employee[j];
+                    li.appendChild(div);
+                }
+                ol.appendChild(li);
+            }
+			document.body.appendChild(ol);
+        }
+    </script>
+</body>
+
+</html>

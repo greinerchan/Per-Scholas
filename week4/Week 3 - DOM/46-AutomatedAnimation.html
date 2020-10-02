@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Automated Animation</title>
+
+</head>
+
+<body>
+    <div style="text-align:right;width: 100px; float: left;">
+    <img id="myImage" src="Assets/ship.png" height="100px" width="100px" />
+    </div>
+    <div style="text-align: center; width: 480px;">
+        <button id= "KeyW" >UP</button><br><br>
+        <button id= "KeyA" >LEFT</button>
+        <button id= "KeyD" >RIGHT</button><br><br>
+        <button id= "KeyS" >DOWN</button><br><br>
+
+    </div>
+   
+
+<!-- JavaScript code starts -->
+<script>
+    var animate;
+    const buttons = document.querySelectorAll('button');
+
+    for(var i=0;i<buttons.length;i++){
+        
+        buttons[i].addEventListener('click', function() {
+            var direction = event.target.id;
+            animate = setInterval( function() {moveImage(direction);},60);
+        });
+        document.addEventListener('mouseup', function() {clearInterval(animate);});
+    }
+  function init() {
+      imgObj = document.getElementById('myImage');
+      imgObj.style.position = 'relative';
+      imgObj.style.left = '0px';
+      imgObj.style.top = '0px';
+      
+  };
+  window.onload = init;
+  function moveImage(direction){
+      if(direction === 'KeyD'){imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';};
+      if(direction === 'KeyA'){imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px' ;};
+      if(direction === 'KeyW'){imgObj.style.top = parseInt(imgObj.style.top) - 10 + 'px';};
+      if(direction === 'KeyS'){imgObj.style.top = parseInt(imgObj.style.top) + 10 + 'px';};
+  };
+
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>

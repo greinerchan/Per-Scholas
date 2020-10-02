@@ -1,0 +1,14 @@
+package com.perscholas.junitbasic.testsuite;
+
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
+
+public class Class1Test {
+
+	@Test
+	public void testClass1() {
+		assertTrue(true);
+	}
+}

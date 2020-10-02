@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Inline Event Handler Attribute</title>
+
+</head>
+
+<body>
+
+    <button onclick="changeText()">Click Me</button>
+    <p>Try to change me.</p>
+
+<!-- JavaScript code starts -->
+<script>
+    //Function to modify the text content of the paragraph
+   const changeText = () => {
+       const p = document.querySelector('p');
+       p.textContent = "I changed because of an inline event handler.";
+   }
+</script>
+<!-- JavaScript code ends !!-->
+
+
+</body>
+
+
+</html>
