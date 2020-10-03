@@ -5,9 +5,11 @@ import javax.persistence.*;
 @Entity
 @Table(name= "course")
 public class Course {
+	
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id")
+    @OrderBy
     private int cId;
 
     @Column(name = "name")

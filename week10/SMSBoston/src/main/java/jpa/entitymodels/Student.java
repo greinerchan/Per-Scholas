@@ -19,6 +19,7 @@ public class Student {
     private String sPass;
 
     @OneToMany(targetEntity = Course.class)
+    @OrderBy
     private List<Course> sCourses;
 
     public Student() {

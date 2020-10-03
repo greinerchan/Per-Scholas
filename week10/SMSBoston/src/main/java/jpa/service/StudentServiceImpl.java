@@ -1,6 +1,6 @@
 package jpa.service;
 
-import jpa.dao.StudentDAO;
+
 import jpa.entitymodels.Course;
 import jpa.entitymodels.Student;
 
@@ -11,6 +11,7 @@ public class StudentServiceImpl implements StudentService {
 
 
 
+	// get all the student
 	@Override
 	public List<Student> getAllStudents() {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("SMSBoston");
@@ -20,6 +21,7 @@ public class StudentServiceImpl implements StudentService {
 		return studentList;
 	}
 
+	// find the student by its email
 	@Override
 	public Student getStudentByEmail(String sEmail) {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("SMSBoston");
@@ -27,23 +29,29 @@ public class StudentServiceImpl implements StudentService {
 		Query query = entityManager.createQuery("SELECT s FROM Student s WHERE s.sEmail = :email");
 		query.setParameter("email", sEmail);
 		Student student = (Student) query.getSingleResult();
+		if (student == null) {
+			throw new AssertionError("No Student Can Be Found");
+		}
 		return student;
 	}
 
+	// check the credential of log in
 	@Override
 	public boolean validateStudent(String sEmail, String sPassword) {
-		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("SMSBoston");
-		EntityManager entityManager = entityManagerFactory.createEntityManager();
-		Query query = entityManager.createQuery("SELECT s FROM Student s WHERE s.sEmail = :email");
-		query.setParameter("email", sEmail);
-		Student student = (Student) query.getSingleResult();
-		if (student != null && student.getsPass().equals(sPassword)) {
-			return true;
-		} else {
-			return false;
+
+		try {
+			Student student = getStudentByEmail(sEmail);
+			if (student != null && student.getsPass().equals(sPassword)) {
+				return true;
+			} else {
+				return false;
+			}
+		} catch (Exception e) {
+			throw new AssertionError("No Student Can Be Found");
 		}
 	}
-
+	
+	// register the student to the course
 	@Override
 	public void registerStudentToCourse(String sEmail, int cId) {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("SMSBoston");
@@ -55,12 +63,20 @@ public class StudentServiceImpl implements StudentService {
 
 		Query query2 = entityManager.createQuery("SELECT c FROM Course c WHERE c.cId = :id");
 		query2.setParameter("id", cId);
-		Course course = (Course) query2.getSingleResult();
-
-		student.addCourses(course);
-		entityManager.getTransaction().commit();
+		try {
+			Course course = (Course) query2.getSingleResult();
+			if (student.getsCourses().contains(course)) {
+				throw new AssertionError("The Course already in Your Cart");
+			}
+			student.addCourses(course);
+			entityManager.getTransaction().commit();
+		} catch (Exception e) {
+			throw new AssertionError("No Course is Found");
+		}
+	
 	}
 
+	// get student by email
 	@Override
 	public List<Course> getStudentCourses(String sEmail) {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("SMSBoston");
